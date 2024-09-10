@@ -82,8 +82,8 @@ This project is a [Metronome API](https://docs.metronome.com/api/) client that g
 ## How to execute
 1. Clone the repository
 ```
-git clone <repository-url>
-cd metronome_report
+git clone https://github.com/shanjon/metronome-customer-report-project
+cd metronome-customer-report-project
 ```
 
 2. Set up a virtual environment
@@ -92,11 +92,12 @@ python3 -m venv venv
 ```
 
 3. Activate the virtual environment
-_On Windows:_
+    _On Windows:_
 ```
 venv\Scripts\activate
 ```
-_On macOS and Linux:_
+
+    _On macOS and Linux:_
 ```
 source venv/bin/activate
 ```
@@ -107,12 +108,13 @@ pip install -r requirements.txt
 ```
 
 5. Set your Metronome API token
-_On Windows (Command Prompt):_
+
+    _On Windows (Command Prompt):_
 ```
 set METRONOME_API_TOKEN=your_api_token_here
 ```
 
-_On macOS and Linux:_
+    _On macOS and Linux:_
 ```
 export METRONOME_API_TOKEN=your_api_token_here
 ```
