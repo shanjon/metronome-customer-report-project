@@ -26,22 +26,22 @@ metronome-customer-report-project/
 ```
 
 ### Key Components
-`main.py`: The entry point of the application. It orchestrates the entire process of generating and saving the report.
+- `main.py`: The entry point of the application. It orchestrates the entire process of generating and saving the report.
 
-`src/`: Contains all the source code for the project, organized into subdirectories:
-- `api/`: Handles all interactions with the Metronome API.
-    - `client.py`: Manages HTTP requests to the API.
-    - `customers.py`: Functions for fetching customer data.
-    - `invoices.py`: Functions for fetching invoice data.
-    - `credits.py`: Functions for fetching credit data.
+- `src/`: Contains all the source code for the project, organized into subdirectories:
+    - `api/`: Handles all interactions with the Metronome API.
+        - `client.py`: Manages HTTP requests to the API.
+        - `customers.py`: Functions for fetching customer data.
+        - `invoices.py`: Functions for fetching invoice data.
+        - `credits.py`: Functions for fetching credit data.
 
-- `utils/`: Provides utility functions used throughout the project.
-    - `config.py`: Manages application configuration, including API credentials.
-    - `logging.py`: Provides logging functionality for tracking execution and errors.
+    - `utils/`: Provides utility functions used throughout the project.
+        - `config.py`: Manages application configuration, including API credentials.
+        - `logging.py`: Provides logging functionality for tracking execution and errors.
 
-- `report/`: Contains logic for generating and writing the report.
-    - `generator.py`: Orchestrates data collection and processing for the report.
-    - `writer.py`: Handles writing the processed report data to a CSV file.
+    - `report/`: Contains logic for generating and writing the report.
+        - `generator.py`: Orchestrates data collection and processing for the report.
+        - `writer.py`: Handles writing the processed report data to a CSV file.
 
 `requirements.txt`: Lists the Python packages required to run the application
 
