@@ -1,18 +1,79 @@
 # Metronome Customer Report Project
 This project is a [Metronome API](https://docs.metronome.com/api/) client that generates a customer summary report. It fetches data about customers, their invoices, and credit balances from the Metronome API, processes this information, and creates a CSV report.
 
+## Project Structure
+```
+metronome-customer-report-project/
+│
+├── src/                  # Source code directory
+│   ├── api/              # API interaction modules
+│   │   ├── client.py     # Base API client
+│   │   ├── customers.py  # Customer data retrieval
+│   │   ├── invoices.py   # Invoice data retrieval
+│   │   └── credits.py    # Credit data retrieval
+│   │
+│   ├── utils/            # Utility modules
+│   │   ├── config.py     # Configuration management
+│   │   └── logging.py    # Logging utilities
+│   │
+│   └── report/           # Report generation modules
+│       ├── generator.py  # Report data generation
+│       └── writer.py     # CSV writing utilities
+│
+├── main.py               # Main execution script
+├── requirements.txt      # Project dependencies
+└── README.md             # Project documentation
+```
+
+### Key Components
+`main.py`: The entry point of the application. It orchestrates the entire process of generating and saving the report.
+
+`src/`: Contains all the source code for the project, organized into subdirectories:
+- `api/`: Handles all interactions with the Metronome API.
+    - `client.py`: Manages HTTP requests to the API.
+    - `customers.py`: Functions for fetching customer data.
+    - `invoices.py`: Functions for fetching invoice data.
+    - `credits.py`: Functions for fetching credit data.
+
+- `utils/`: Provides utility functions used throughout the project.
+    - `config.py`: Manages application configuration, including API credentials.
+    - `logging.py`: Provides logging functionality for tracking execution and errors.
+
+- `report/`: Contains logic for generating and writing the report.
+    - `generator.py`: Orchestrates data collection and processing for the report.
+    - `writer.py`: Handles writing the processed report data to a CSV file.
+
+`requirements.txt`: Lists the Python packages required to run the application
+
+
+
+
+
+
+
+
+<br><br><br><br>
+
 ## Project Structure and Key Components
+The project contains a root directory, and 
+### `README.md`
+- Explanation of repository and project approach.
+
 ### `main.py`
 - This is the entry point of the application.
 - It orchestrates the entire process by calling functions to retrieve customer data, generate the report, and save it to a CSV file.
 - It also handles top-level error management and logging.
 
+### `requirements.txt`
+- Lists the Python packages required to run the application (in this case, just the requests library).
+
 ### `src/__init__.py`
+Definition of `src/` subdirectory.
 - Marks the src directory as a Python package.
 - Allows easy importing from subpackages.
 
 ### `src/api/`
-- This directory contains all API-related functionality.
+This directory contains all API-related functionality.
 
 - #### `client.py`
     - Defines the `MetronomeClient` class, which handles HTTP requests to the Metronome API.
@@ -55,9 +116,6 @@ This project is a [Metronome API](https://docs.metronome.com/api/) client that g
 
 #### `__init__.py`
 - Exposes the main functions from generator and writer modules for easy importing.
-
-### `requirements.txt`
-- Lists the Python packages required to run the application (in this case, just the requests library).
 
 ## How it works
 1. The application starts in `main.py`.
