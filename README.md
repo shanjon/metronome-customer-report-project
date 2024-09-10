@@ -4,7 +4,7 @@ This project is a [Metronome API](https://docs.metronome.com/api/) client that g
 ## Project Structure and Key Components
 ### `main.py`
 - This is the entry point of the application.
-- It orchestrates the entire process by calling functions to generate the report and save it to a CSV file.
+- It orchestrates the entire process by calling functions to retrieve customer data, generate the report, and save it to a CSV file.
 - It also handles top-level error management and logging.
 
 ### `src/__init__.py`
@@ -14,9 +14,9 @@ This project is a [Metronome API](https://docs.metronome.com/api/) client that g
 ### `src/api/`
 - This directory contains all API-related functionality.
 
-#### `client.py`
-- Defines the `MetronomeClient` class, which handles HTTP requests to the Metronome API.
-- Manages authentication and provides methods for GET and POST requests.
+- #### `client.py`
+    - Defines the `MetronomeClient` class, which handles HTTP requests to the Metronome API.
+    - Manages authentication and provides methods for GET and POST requests.
 
 #### `customers.py`
 - Contains the get_customers() function to fetch customer data from the API.
@@ -92,12 +92,10 @@ python3 -m venv venv
 ```
 
 3. Activate the virtual environment
-
 - _On Windows:_
 ```
 venv\Scripts\activate
 ```
-
 - _On macOS and Linux:_
 ```
 source venv/bin/activate
