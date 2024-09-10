@@ -116,7 +116,7 @@ export METRONOME_API_TOKEN=your_api_token_here
 python main.py
 ```
 
-The program will execute and generate a CSV file in the same directory with a name like `customer_summary_report_YYYYMMDD_HHMMSS.csv`.
+The program will execute and generate a CSV file in the same directory with a name like `customer_summary_report_YYYYMMDD_HHMMSS.csv` - _see example `example_report.csv`._
 
 ## Challenges
 - Trying to understand which API endpoints were relevant to the assignment and how to calculate invoice balance, current credit balance (see [Assumptions](https://github.com/shanjon/metronome-customer-report-project?tab=readme-ov-file#assumptions))
