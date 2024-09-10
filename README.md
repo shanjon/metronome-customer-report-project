@@ -1,5 +1,5 @@
 # Metronome Customer Report Project
-This project is a [Metronome API](https://docs.metronome.com/api/) client that generates a customer summary report. It fetches data about customers, their invoices, and credit balances from the Metronome API, processes this information, and creates a CSV report.
+This project is a [Metronome API](https://docs.metronome.com/api/) client that generates a customer summary report. It fetches data about customers, their invoices, and credit balances from the Metronome API, processes this information, and creates a summarized CSV report.
 
 ## Project Structure
 ```
@@ -43,7 +43,7 @@ metronome-customer-report-project/
         - `generator.py`: Orchestrates data collection and processing for the report.
         - `writer.py`: Handles writing the processed report data to a CSV file.
 
-`requirements.txt`: Lists the Python packages required to run the application
+- `requirements.txt`: Lists the Python packages required to run the application
 
 ## How it works
 1. The application starts in `main.py`.
@@ -74,7 +74,7 @@ cd metronome-customer-report-project
 
 2. Set up a virtual environment
 ```
-python3 -m venv venv
+python -m venv venv
 ```
 
 3. Activate the virtual environment
