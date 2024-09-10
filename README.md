@@ -117,3 +117,8 @@ python main.py
 ```
 
 The program will execute and generate a CSV file in the same directory with a name like `customer_summary_report_YYYYMMDD_HHMMSS.csv`.
+
+## Challenges
+- Trying to understand which API endpoints were relevant to the assignment and how to calculate invoice balance, current credit balance (see [Assumptions](https://github.com/shanjon/metronome-customer-report-project?tab=readme-ov-file#assumptions))
+- General organization of the project - for example, determining whether to generate the invoice balance and credit balance as part of the same function that calls their respective APIs, or if it should be its own separate subdirectory/set of functions
+- Testing each component of the project in isolation - I initially wrote a single script with all functionality and then once it was working organized it into packages/subdirectories
