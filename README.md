@@ -6,17 +6,22 @@ This project is a [Metronome API](https://docs.metronome.com/api/) client that g
 metronome-customer-report-project/
 │
 ├── src/                  # Source code directory
+│   ├── __init__.py       # Makes src a package, simplifies imports
+│   │
 │   ├── api/              # API interaction modules
+│   │   ├── __init__.py   # Exposes main functions from API modules
 │   │   ├── client.py     # Base API client
 │   │   ├── customers.py  # Customer data retrieval
 │   │   ├── invoices.py   # Invoice data retrieval
 │   │   └── credits.py    # Credit data retrieval
 │   │
 │   ├── utils/            # Utility modules
+│   │   ├── __init__.py   # Exposes utility functions
 │   │   ├── config.py     # Configuration management
 │   │   └── logging.py    # Logging utilities
 │   │
 │   └── report/           # Report generation modules
+│       ├── __init__.py   # Exposes report generation functions
 │       ├── generator.py  # Report data generation
 │       └── writer.py     # CSV writing utilities
 │
@@ -29,17 +34,21 @@ metronome-customer-report-project/
 - `main.py`: The entry point of the application. It orchestrates the entire process of generating and saving the report.
 
 - `src/`: Contains all the source code for the project, organized into subdirectories:
+    - `__init__.py`: Makes src a Python package, allowing for top-level imports like from src import api, utils, report.
     - `api/`: Handles all interactions with the Metronome API.
+        - `__init__.py`: Simplifies imports by exposing main functions from API modules.
         - `client.py`: Manages HTTP requests to the API.
         - `customers.py`: Functions for fetching customer data.
         - `invoices.py`: Functions for fetching invoice data.
         - `credits.py`: Functions for fetching credit data.
 
     - `utils/`: Provides utility functions used throughout the project.
+        - `__init__.py`: Exposes utility functions for easy importing.
         - `config.py`: Manages application configuration, including API credentials.
         - `logging.py`: Provides logging functionality for tracking execution and errors.
 
     - `report/`: Contains logic for generating and writing the report.
+        - `__init__.py`: Exposes main functions for report generation and writing.
         - `generator.py`: Orchestrates data collection and processing for the report.
         - `writer.py`: Handles writing the processed report data to a CSV file.
 
