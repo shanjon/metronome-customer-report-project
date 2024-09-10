@@ -34,7 +34,7 @@ metronome-customer-report-project/
 - `main.py`: The entry point of the application. It orchestrates the entire process of generating and saving the report.
 
 - `src/`: Contains all the source code for the project, organized into subdirectories:
-    - `__init__.py`: Makes src a Python package, allowing for top-level imports like from src import api, utils, report.
+    - `__init__.py`: Makes `src` a Python package, allowing for top-level imports like `from src import api, utils, report`.
     - `api/`: Handles all interactions with the Metronome API.
         - `__init__.py`: Simplifies imports by exposing main functions from API modules.
         - `client.py`: Manages HTTP requests to the API.
